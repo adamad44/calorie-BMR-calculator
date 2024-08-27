@@ -13,7 +13,7 @@ def calculate():
     if dropdownGender.cget("text") == "male":
         gender = "m"
     else:
-        genderq = "f"
+        gender = "f"
     try:
         weight = float(weightEntry.get())
         height = float(heightEntry.get())
@@ -22,8 +22,9 @@ def calculate():
         BMR = calculateBMR(gender, weight, height, age)
         calories = calculateCalories(BMR)
         resultLabel.config(text=f"your BMR is {BMR}\n {calories}")
-    except:
+    except Exception as E:
         resultLabel.config(text="please enter valid values")
+        print(E)
 
 
 titleLabel = Label(root, text="BMR + calorie calculator", font=("Helvetica", 30))
