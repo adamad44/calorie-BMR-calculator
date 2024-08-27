@@ -4,7 +4,14 @@ This is a command-line interface (CLI) application that calculates Basal Metabol
 
 ## GUI Version
 
-**Note:** A graphical user interface (GUI) version of this application is currently under development.
+To access the GUI version, follow these steps:
+
+1. Navigate to the GUI folder in the project directory.
+2. Download both Python files.
+3. Run the `GUI.py` file.
+4. A tkinter window will open, providing the GUI interface.
+
+Enjoy the enhanced user experience!
 
 ## Dependencies
 
