@@ -4,7 +4,7 @@ from tkinter import StringVar
 import tkinter as tk
 
 root = tk.Tk()
-root.title("BMR + calorie calculator")
+root.title("BMR + maintenance calorie calculator")
 root.geometry("500x600")
 root.resizable(False, False)
 
@@ -20,8 +20,9 @@ def calculate():
         age = int(ageEntry.get())
         
         BMR = calculateBMR(gender, weight, height, age)
+        roundedBMR = round(BMR)
         calories = calculateCalories(BMR)
-        resultLabel.config(text=f"your BMR is {BMR}\n {calories}")
+        resultLabel.config(text=f"your BMR is {roundedBMR}\n {calories}")
     except Exception as E:
         resultLabel.config(text="please enter valid values")
         print(E)
